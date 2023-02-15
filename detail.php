@@ -4,7 +4,6 @@ try {
     $db = new PDO("mysql:host=localhost;dbname=fietsenmaker", "root", "");
 
     $query = $db->prepare("SELECT * FROM fietsen WHERE id = ". $_GET['id']);
-
     $query->execute();
     $result = $query->fetchALL(PDO::FETCH_ASSOC);
 
